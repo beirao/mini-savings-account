@@ -2,13 +2,13 @@
 
 .PHONY: all test clean deploy-anvil
 
-all: clean remove install update build
+all: clean install update build
 
 # Clean the repo
 clean  :; forge clean
 
 # Remove modules
-remove :; rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib && touch .gitmodules && git add . && git commit -m "modules"
+remove :; rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib/forge-std && rm -rf lib/openzeppelin-contracts &&  rm -rf lib/solmate && touch .gitmodules && git add . && git commit -m "modules"
 
 install :; forge install --no-commit transmissions11/solmate && forge install --no-commit foundry-rs/forge-std && forge install --no-commit OpenZeppelin/openzeppelin-contracts
 

@@ -20,7 +20,6 @@ And you probably already have `make` installed... but if not [try looking here.]
 ```sh
 git clone https://github.com/beirao/mini-savings-account
 cd mini-savings-account
-make # This installs the project's dependencies.
 mv .env.example .env
 make test
 ```
